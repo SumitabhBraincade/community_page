@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient_button {
+  background: linear-gradient(
+    90deg,
+    #fa699c 0%,
+    #e365e8 22.5%,
+    #5086f9 49%,
+    #96e489 74.5%,
+    #f8c047 98.5%
+  );
+  background-size: 100% 100%;
+}
+
+.gradient_button:hover {
+  background-size: 200% 200%;
+  animation: gradient_animation 3s ease-in-out backwards;
+}
+
+@keyframes gradient_animation {
+  0% {
+    background-position: 200% 200%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 100%;
+  }
+}
