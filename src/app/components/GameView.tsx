@@ -14,10 +14,6 @@ interface Game {
   likes: number;
 }
 
-interface SelectedGame {
-  id: string;
-}
-
 const games: Game[] = [
   {
     id: "1",
