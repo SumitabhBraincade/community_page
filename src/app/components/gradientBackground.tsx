@@ -30,7 +30,7 @@ const GradientBackground = () => {
           <path
             d="M542.276 202.35C551.884 190.369 570.116 190.369 579.724 202.35L876.126 571.986C888.723 587.696 877.539 611 857.402 611H264.598C244.461 611 233.277 587.696 245.874 571.986L542.276 202.35Z"
             fill="url(#paint0_linear_58_60473)"
-            fill-opacity="0.5"
+            fillOpacity="0.5"
           />
         </g>
         <defs>
@@ -41,9 +41,9 @@ const GradientBackground = () => {
             width="1120.89"
             height="897.637"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -63,10 +63,10 @@ const GradientBackground = () => {
             y2="425.856"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F468B2" />
-            <stop offset="0.32" stop-color="#6A81F6" />
-            <stop offset="0.62" stop-color="#93DF8F" />
-            <stop offset="1" stop-color="#F8C048" />
+            <stop stopColor="#F468B2" />
+            <stop offset="0.32" stopColor="#6A81F6" />
+            <stop offset="0.62" stopColor="#93DF8F" />
+            <stop offset="1" stopColor="#F8C048" />
           </linearGradient>
         </defs>
       </svg>

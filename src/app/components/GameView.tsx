@@ -119,7 +119,11 @@ const GameView = () => {
         </div>
         <div className="grid grid-col-1 md:grid-cols-3 gap-4">
           {games.slice(2).map((game, index) => (
-            <GameCard game={game} setSelectedGame={setSelectedGame} />
+            <GameCard
+              game={game}
+              setSelectedGame={setSelectedGame}
+              key={index}
+            />
           ))}
         </div>
       </div>
