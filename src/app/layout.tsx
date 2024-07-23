@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./components/navbar";
 import GradientBackground from "./components/gradientBackground";
 

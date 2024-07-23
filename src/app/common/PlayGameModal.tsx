@@ -10,8 +10,8 @@ interface PlayGameModalProps {
 }
 
 const PlayGameModal: React.FC<PlayGameModalProps> = ({
-  selectedGame,
   setSelectedGame,
+  selectedGame,
 }) => {
   const [details, setDetails] = useState(false);
 
