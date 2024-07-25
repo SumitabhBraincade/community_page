@@ -26,7 +26,7 @@ const GameCard: React.FC<GameCardProps> = ({ game, setSelectedGame }) => {
 
   return (
     <div
-      className="w-full h-[250px] md:h-[350px] border-[1px] border-white relative flex items-end rounded-lg bg-cover bg-no-repeat bg-center cursor-pointer group"
+      className="w-full h-[250px] md:h-[300px] relative flex items-end rounded-lg bg-cover bg-no-repeat bg-center cursor-pointer group"
       style={{
         backgroundImage: `url(${thumbnail})`,
       }}
