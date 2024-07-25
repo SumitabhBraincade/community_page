@@ -13,9 +13,14 @@ interface GameCardProps {
     likes: number;
   };
   setSelectedGame: (id: string) => void;
+  isSmall: boolean;
 }
 
-const GameCard: React.FC<GameCardProps> = ({ game, setSelectedGame }) => {
+const GameCard: React.FC<GameCardProps> = ({
+  game,
+  setSelectedGame,
+  isSmall,
+}) => {
   const { id, title, thumbnail, creator, views, likes } = game;
 
   const handleGameClick = () => {
@@ -26,33 +31,44 @@ const GameCard: React.FC<GameCardProps> = ({ game, setSelectedGame }) => {
 
   return (
     <div
-      className="w-full h-[250px] md:h-[300px] relative flex items-end rounded-lg bg-cover bg-no-repeat bg-center cursor-pointer group"
-      style={{
-        backgroundImage: `url(${thumbnail})`,
-      }}
+      className={`w-full h-[250px] ${isSmall ? "md:h-[230px]" : "md:h-[320px]"} relative rounded-lg bg-cover bg-no-repeat bg-center cursor-pointer group overflow-hidden`}
       key={id}
       onClick={handleGameClick}
     >
-      <div className="w-0 h-full group-hover:w-full flex justify-center items-center group-hover:h-full absolute top-0 left-0 bg-[#0000004f] transition-all duration-300">
-        <div className="hidden group-hover:flex w-[70px] h-[70px] rounded-full justify-center items-center bg-[#212121]">
-          <div className="ml-1">
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M30.0055 17.8271C30.0066 18.2838 29.8895 18.733 29.6656 19.1311C29.4416 19.5291 29.1185 19.8625 28.7276 20.0986L4.50222 34.9184C4.09378 35.1685 3.62599 35.305 3.14715 35.3139C2.66831 35.3228 2.19578 35.2036 1.77837 34.9688C1.36494 34.7377 1.02053 34.4006 0.780576 33.9922C0.540621 33.5838 0.413777 33.1188 0.413086 32.6452V3.00904C0.413777 2.53537 0.540621 2.07043 0.780576 1.66204C1.02053 1.25364 1.36494 0.916528 1.77837 0.685367C2.19578 0.450559 2.66831 0.331438 3.14715 0.340305C3.62599 0.349172 4.09378 0.485707 4.50222 0.735809L28.7276 15.5555C29.1185 15.7917 29.4416 16.1251 29.6656 16.5231C29.8895 16.9212 30.0066 17.3704 30.0055 17.8271Z"
-                fill="white"
-              />
-            </svg>
+      <div
+        className="w-full h-full flex items-end rounded-lg transition-all duration-300 hover:scale-110"
+        style={{
+          backgroundImage: `url(${thumbnail})`,
+        }}
+      >
+        <div
+          className={`w-full h-0 transition-all duration-300 group-hover:h-full`}
+          style={{
+            background:
+              "linear-gradient(186.98deg, rgba(217, 217, 217, 0) 4.82%, rgba(23, 23, 23, 0.45) 48.5%, rgba(23, 23, 23, 0.75) 93.22%)",
+          }}
+        ></div>
+        <div className="w-0 h-full group-hover:w-full flex justify-center items-center group-hover:h-full absolute top-0 left-0 transition-all duration-300">
+          <div className="hidden group-hover:flex w-[70px] h-[70px] rounded-full justify-center items-center bg-[#212121]">
+            <div className="ml-1">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30.0055 17.8271C30.0066 18.2838 29.8895 18.733 29.6656 19.1311C29.4416 19.5291 29.1185 19.8625 28.7276 20.0986L4.50222 34.9184C4.09378 35.1685 3.62599 35.305 3.14715 35.3139C2.66831 35.3228 2.19578 35.2036 1.77837 34.9688C1.36494 34.7377 1.02053 34.4006 0.780576 33.9922C0.540621 33.5838 0.413777 33.1188 0.413086 32.6452V3.00904C0.413777 2.53537 0.540621 2.07043 0.780576 1.66204C1.02053 1.25364 1.36494 0.916528 1.77837 0.685367C2.19578 0.450559 2.66831 0.331438 3.14715 0.340305C3.62599 0.349172 4.09378 0.485707 4.50222 0.735809L28.7276 15.5555C29.1185 15.7917 29.4416 16.1251 29.6656 16.5231C29.8895 16.9212 30.0066 17.3704 30.0055 17.8271Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
       <div
-        className="w-full h-[120px]"
+        className={`absolute bottom-0 w-full h-[70px] ${isSmall ? "md:h-[70px]" : "md:h-[90px]"} z-30`}
         style={{
           background:
             "linear-gradient(186.98deg, rgba(217, 217, 217, 0) 4.82%, rgba(23, 23, 23, 0.45) 48.5%, rgba(23, 23, 23, 0.75) 93.22%)",
@@ -60,12 +76,18 @@ const GameCard: React.FC<GameCardProps> = ({ game, setSelectedGame }) => {
       >
         <div className="h-full flex justify-between items-end px-[15px] pb-[15px]">
           <div className="flex items-center gap-3">
-            <div className="hidden md:flex w-10 h-10 rounded-full bg-white"></div>
+            <div
+              className={`hidden md:flex ${isSmall ? "w-8 h-8" : "w-10 h-10"} rounded-full bg-white`}
+            ></div>
             <div className="flex flex-col items-start">
-              <p className="text-base md:text-[20px] font-medium text-white">
+              <p
+                className={`text-base ${isSmall ? "md:text-[16px]" : "md:text-[20px]"} font-medium text-white`}
+              >
                 {title}
               </p>
-              <p className="text-xs md:text-base font-medium text-[#ffffff7d]">
+              <p
+                className={`text-xs ${isSmall ? "md:text-xs" : "md:text-base"} font-medium text-[#ffffff7d]`}
+              >
                 {creator}
               </p>
             </div>
@@ -74,8 +96,8 @@ const GameCard: React.FC<GameCardProps> = ({ game, setSelectedGame }) => {
             <div className="flex gap-2 items-center">
               <div className="">
                 <svg
-                  width="18"
-                  height="12"
+                  width="16"
+                  height="10"
                   viewBox="0 0 18 12"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -88,15 +110,15 @@ const GameCard: React.FC<GameCardProps> = ({ game, setSelectedGame }) => {
                   />
                 </svg>
               </div>
-              <p className="text-xs md:text-base font-medium text-white">
+              <p className="text-xs md:text-xs font-medium text-white">
                 {views}
               </p>
             </div>
             <div className="flex gap-2 items-center">
               <div className="">
                 <svg
-                  width="19"
-                  height="17"
+                  width="16"
+                  height="13"
                   viewBox="0 0 19 17"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +131,7 @@ const GameCard: React.FC<GameCardProps> = ({ game, setSelectedGame }) => {
                   />
                 </svg>
               </div>
-              <p className="text-xs md:text-base font-medium text-white">
+              <p className="text-xs md:text-xs font-medium text-white">
                 {likes}
               </p>
             </div>

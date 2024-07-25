@@ -110,8 +110,16 @@ const GameView = () => {
       }
       <div className="md:px-4 mt-4">
         <div className="grid grid-col-1 md:grid-cols-2 gap-4 mb-4">
-          <GameCard game={games[0]} setSelectedGame={setSelectedGame} />
-          <GameCard game={games[1]} setSelectedGame={setSelectedGame} />
+          <GameCard
+            game={games[0]}
+            setSelectedGame={setSelectedGame}
+            isSmall={false}
+          />
+          <GameCard
+            game={games[1]}
+            setSelectedGame={setSelectedGame}
+            isSmall={false}
+          />
         </div>
         <div className="grid grid-col-1 md:grid-cols-3 gap-4">
           {games.slice(2).map((game, index) => (
@@ -119,6 +127,7 @@ const GameView = () => {
               game={game}
               setSelectedGame={setSelectedGame}
               key={index}
+              isSmall={true}
             />
           ))}
         </div>
