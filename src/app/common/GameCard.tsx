@@ -31,7 +31,7 @@ const GameCard: React.FC<GameCardProps> = ({
 
   return (
     <div
-      className={`w-full h-[250px] ${isSmall ? "md:h-[230px]" : "md:h-[320px]"} relative rounded-lg bg-cover bg-no-repeat bg-center cursor-pointer group overflow-hidden`}
+      className={`w-full h-[220px] ${isSmall ? "md:h-[200px]" : "md:h-[280px]"} relative rounded-lg bg-cover bg-no-repeat bg-center cursor-pointer group overflow-hidden`}
       key={id}
       onClick={handleGameClick}
     >
@@ -48,32 +48,30 @@ const GameCard: React.FC<GameCardProps> = ({
               "linear-gradient(186.98deg, rgba(217, 217, 217, 0) 4.82%, rgba(23, 23, 23, 0.45) 48.5%, rgba(23, 23, 23, 0.75) 93.22%)",
           }}
         ></div>
-        <div className="w-0 h-full group-hover:w-full flex justify-center items-center group-hover:h-full absolute top-0 left-0 transition-all duration-300">
-          <div
-            className={`hidden group-hover:flex w-[50px] h-[50px] ${isSmall ? "md:w-[50px] md:h-[50px]" : "md:w-[70px] md:h-[70px]"} rounded-full justify-center items-center bg-[#212121]`}
-          >
-            <div className="ml-1">
-              <svg
-                width={isSmall ? "20" : "30"}
-                height={isSmall ? "20" : "30"}
-                viewBox="0 0 30 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M30.0055 17.8271C30.0066 18.2838 29.8895 18.733 29.6656 19.1311C29.4416 19.5291 29.1185 19.8625 28.7276 20.0986L4.50222 34.9184C4.09378 35.1685 3.62599 35.305 3.14715 35.3139C2.66831 35.3228 2.19578 35.2036 1.77837 34.9688C1.36494 34.7377 1.02053 34.4006 0.780576 33.9922C0.540621 33.5838 0.413777 33.1188 0.413086 32.6452V3.00904C0.413777 2.53537 0.540621 2.07043 0.780576 1.66204C1.02053 1.25364 1.36494 0.916528 1.77837 0.685367C2.19578 0.450559 2.66831 0.331438 3.14715 0.340305C3.62599 0.349172 4.09378 0.485707 4.50222 0.735809L28.7276 15.5555C29.1185 15.7917 29.4416 16.1251 29.6656 16.5231C29.8895 16.9212 30.0066 17.3704 30.0055 17.8271Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
+        <div
+          className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-0 group-hover:opacity-100 flex w-[50px] h-[50px] ${isSmall ? "md:w-[50px] md:h-[50px]" : "md:w-[70px] md:h-[70px]"} rounded-full justify-center items-center bg-[#212121] transition-all duration-300`}
+        >
+          <div className="ml-1">
+            <svg
+              width={isSmall ? "20" : "30"}
+              height={isSmall ? "20" : "30"}
+              viewBox="0 0 30 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.0055 17.8271C30.0066 18.2838 29.8895 18.733 29.6656 19.1311C29.4416 19.5291 29.1185 19.8625 28.7276 20.0986L4.50222 34.9184C4.09378 35.1685 3.62599 35.305 3.14715 35.3139C2.66831 35.3228 2.19578 35.2036 1.77837 34.9688C1.36494 34.7377 1.02053 34.4006 0.780576 33.9922C0.540621 33.5838 0.413777 33.1188 0.413086 32.6452V3.00904C0.413777 2.53537 0.540621 2.07043 0.780576 1.66204C1.02053 1.25364 1.36494 0.916528 1.77837 0.685367C2.19578 0.450559 2.66831 0.331438 3.14715 0.340305C3.62599 0.349172 4.09378 0.485707 4.50222 0.735809L28.7276 15.5555C29.1185 15.7917 29.4416 16.1251 29.6656 16.5231C29.8895 16.9212 30.0066 17.3704 30.0055 17.8271Z"
+                fill="white"
+              />
+            </svg>
           </div>
         </div>
       </div>
       <div
-        className={`absolute bottom-0 w-full h-[70px] ${isSmall ? "md:h-[70px]" : "md:h-[90px]"} z-30`}
+        className={`absolute bottom-0 w-full h-[70px] ${isSmall ? "md:h-[70px]" : "md:h-[80px]"}`}
         style={{
           background:
-            "linear-gradient(186.98deg, rgba(217, 217, 217, 0) 4.82%, rgba(23, 23, 23, 0.45) 48.5%, rgba(23, 23, 23, 0.75) 93.22%)",
+            "linear-gradient(181deg, rgb(217 217 217 / 0%) 4.82%, rgb(23 23 23 / 74%) 48.5%, rgb(23 23 23) 93.22%)",
         }}
       >
         <div className="h-full flex justify-between items-end px-[15px] pb-[15px]">

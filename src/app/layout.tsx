@@ -24,8 +24,8 @@ export default function RootLayout({
           inter.className + "h-screen max-w-screen overflow-x-hidden no_scroll"
         }
       >
-        <div className="max-w-full min-h-full relative flex flex-col items-center h-fit bg-[#090909]">
-          <div className="w-full flex-1 px-4 md:px-[200px]">
+        <div className="max-w-full min-h-full relative flex flex-col items-center h-fit bg-[#000000]">
+          <div className="w-full flex-1 px-4 md:max-w-[1100px]">
             <Navbar />
             <GradientBackground />
             {children}
