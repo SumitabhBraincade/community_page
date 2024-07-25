@@ -3,19 +3,23 @@
 import React, { useEffect, useState } from "react";
 
 const GradientBackground = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
 
-    window.addEventListener("resize", handleResize);
+      handleResize();
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  });
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
 
   return (
     <div className="absolute top-0 left-0 w-full z-0 animate-pulse">
