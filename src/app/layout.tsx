@@ -20,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={inter.className + " h-screen w-screen overflow-x-hidden"}
+        className={
+          inter.className + "h-screen max-w-screen overflow-x-hidden no_scroll"
+        }
       >
         <div className="max-w-full min-h-full relative flex flex-col items-center h-fit bg-[#090909]">
           <div className="w-full flex-1 px-4 md:px-[200px]">

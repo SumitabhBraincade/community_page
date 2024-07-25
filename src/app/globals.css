@@ -19,6 +19,10 @@
   animation: gradient_animation 3s ease-in-out backwards;
 }
 
+.no_scroll::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes gradient_animation {
   0% {
     background-position: 200% 200%;
