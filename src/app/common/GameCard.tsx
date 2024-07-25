@@ -49,11 +49,13 @@ const GameCard: React.FC<GameCardProps> = ({
           }}
         ></div>
         <div className="w-0 h-full group-hover:w-full flex justify-center items-center group-hover:h-full absolute top-0 left-0 transition-all duration-300">
-          <div className="hidden group-hover:flex w-[70px] h-[70px] rounded-full justify-center items-center bg-[#212121]">
+          <div
+            className={`hidden group-hover:flex w-[50px] h-[50px] ${isSmall ? "md:w-[50px] md:h-[50px]" : "md:w-[70px] md:h-[70px]"} rounded-full justify-center items-center bg-[#212121]`}
+          >
             <div className="ml-1">
               <svg
-                width="30"
-                height="30"
+                width={isSmall ? "20" : "30"}
+                height={isSmall ? "20" : "30"}
                 viewBox="0 0 30 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
