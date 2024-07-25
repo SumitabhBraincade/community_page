@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import JoinWaitlist from "./components/joinWaitlist";
 import GameView from "./components/GameView";
