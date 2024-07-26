@@ -4,9 +4,20 @@ import React, { useState } from "react";
 import modalBackground from "../assets/modal_background.png";
 import GradientButton from "./GradientButton";
 
+interface Game {
+  id: string;
+  title: string;
+  thumbnail: string;
+  creator: string;
+  avatar: string;
+  gameLink: string;
+  views: number;
+  likes: number;
+}
+
 interface PlayGameModalProps {
-  setSelectedGame: (id: string) => void;
-  selectedGame: string;
+  setSelectedGame: (game: Game | null) => void;
+  selectedGame: Game | null;
 }
 
 const PlayGameModal: React.FC<PlayGameModalProps> = ({
@@ -15,15 +26,17 @@ const PlayGameModal: React.FC<PlayGameModalProps> = ({
 }) => {
   const [details, setDetails] = useState(false);
 
+  console.log(selectedGame);
+
   const handleModalCloseClick = () => {
-    setSelectedGame("");
+    setSelectedGame(null);
     setDetails(false);
     document.body.style.overflow = "scroll";
   };
 
   return (
     <div
-      className={`absolute z-50 top-0 left-0 flex justify-center backdrop-blur-sm items-center transition-all duration-200 ${selectedGame !== "" ? "w-screen h-screen" : "h-0 w-screen"}`}
+      className={`absolute z-50 top-0 left-0 flex justify-center backdrop-blur-sm items-center transition-all duration-200 ${selectedGame !== null ? "w-screen h-screen" : "h-0 w-screen"}`}
       style={{
         backgroundImage: `url(${modalBackground})`,
         backgroundSize: "cover",
@@ -31,7 +44,7 @@ const PlayGameModal: React.FC<PlayGameModalProps> = ({
       }}
     >
       <div
-        className={`w-full md:w-[882px] h-full md:h-fit ${selectedGame === "" ? "hidden" : "flex flex-col"}`}
+        className={`w-full md:w-[882px] h-full md:h-fit ${selectedGame === null ? "hidden" : "flex flex-col"}`}
       >
         <div className="flex items-center justify-start md:justify-end p-2 md:p-0 md:pb-4">
           <div
@@ -53,7 +66,12 @@ const PlayGameModal: React.FC<PlayGameModalProps> = ({
           </div>
         </div>
         <div className="h-[450px] w-full flex-1 md:flex-none bg-[#090909] border-[1px] border-[#161616] rounded-lg p-2">
-          <div className="w-full h-full bg-[#161616]"></div>
+          <div className="w-full h-full bg-[#161616]">
+            <iframe
+              src={selectedGame?.gameLink}
+              className="w-full h-full rounded-md"
+            ></iframe>
+          </div>
         </div>
         <div
           className={`flex justify-center items-center md:hidden h-[40px] w-full`}

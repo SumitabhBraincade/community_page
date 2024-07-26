@@ -2,17 +2,20 @@
 
 import React from "react";
 
+interface Game {
+  id: string;
+  title: string;
+  thumbnail: string;
+  creator: string;
+  avatar: string;
+  gameLink: string;
+  views: number;
+  likes: number;
+}
+
 interface GameCardProps {
-  game: {
-    id: string;
-    title: string;
-    thumbnail: string;
-    creator: string;
-    avatar: string;
-    views: number;
-    likes: number;
-  };
-  setSelectedGame: (id: string) => void;
+  game: Game;
+  setSelectedGame: (game: Game) => void;
   isSmall: boolean;
 }
 
@@ -24,7 +27,7 @@ const GameCard: React.FC<GameCardProps> = ({
   const { id, title, thumbnail, creator, views, likes } = game;
 
   const handleGameClick = () => {
-    setSelectedGame(id);
+    setSelectedGame(game);
     window.scrollTo({ top: 0, behavior: "smooth" });
     document.body.style.overflow = "hidden";
   };
