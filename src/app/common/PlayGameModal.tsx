@@ -24,7 +24,8 @@ const PlayGameModal: React.FC<PlayGameModalProps> = ({
   setSelectedGame,
   selectedGame,
 }) => {
-  const [details, setDetails] = useState(false);
+  const [details, setDetails] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
   console.log(selectedGame);
 

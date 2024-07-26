@@ -24,7 +24,7 @@ const games: Game[] = [
     creator: "Creator 1",
     avatar: "",
     gameLink:
-      "https://play.aicade.in/play/fa64270e-a063-43b2-b201-b5ac37d6ce9f",
+      "https://play.aicade.in/play/da3d06f7-6de6-44a2-8100-0187b81c338e",
     views: 102,
     likes: 102,
   },
@@ -36,7 +36,7 @@ const games: Game[] = [
     creator: "Creator 1",
     avatar: "",
     gameLink:
-      "https://play.aicade.in/play/fa64270e-a063-43b2-b201-b5ac37d6ce9f",
+      "https://play.aicade.in/play/da3d06f7-6de6-44a2-8100-0187b81c338e",
     views: 102,
     likes: 102,
   },
@@ -48,7 +48,7 @@ const games: Game[] = [
     creator: "Creator 1",
     avatar: "",
     gameLink:
-      "https://play.aicade.in/play/fa64270e-a063-43b2-b201-b5ac37d6ce9f",
+      "https://play.aicade.in/play/da3d06f7-6de6-44a2-8100-0187b81c338e",
     views: 102,
     likes: 102,
   },
@@ -60,7 +60,7 @@ const games: Game[] = [
     creator: "Creator 1",
     avatar: "",
     gameLink:
-      "https://play.aicade.in/play/fa64270e-a063-43b2-b201-b5ac37d6ce9f",
+      "https://play.aicade.in/play/da3d06f7-6de6-44a2-8100-0187b81c338e",
     views: 102,
     likes: 102,
   },
@@ -72,7 +72,7 @@ const games: Game[] = [
     creator: "Creator 1",
     avatar: "",
     gameLink:
-      "https://play.aicade.in/play/fa64270e-a063-43b2-b201-b5ac37d6ce9f",
+      "https://play.aicade.in/play/da3d06f7-6de6-44a2-8100-0187b81c338e",
     views: 102,
     likes: 102,
   },
@@ -84,7 +84,7 @@ const games: Game[] = [
     creator: "Creator 1",
     avatar: "",
     gameLink:
-      "https://play.aicade.in/play/fa64270e-a063-43b2-b201-b5ac37d6ce9f",
+      "https://play.aicade.in/play/da3d06f7-6de6-44a2-8100-0187b81c338e",
     views: 102,
     likes: 102,
   },
@@ -96,7 +96,7 @@ const games: Game[] = [
     creator: "Creator 1",
     avatar: "",
     gameLink:
-      "https://play.aicade.in/play/fa64270e-a063-43b2-b201-b5ac37d6ce9f",
+      "https://play.aicade.in/play/da3d06f7-6de6-44a2-8100-0187b81c338e",
     views: 102,
     likes: 102,
   },
@@ -108,7 +108,7 @@ const games: Game[] = [
     creator: "Creator 1",
     avatar: "",
     gameLink:
-      "https://play.aicade.in/play/fa64270e-a063-43b2-b201-b5ac37d6ce9f",
+      "https://play.aicade.in/play/da3d06f7-6de6-44a2-8100-0187b81c338e",
     views: 102,
     likes: 102,
   },
