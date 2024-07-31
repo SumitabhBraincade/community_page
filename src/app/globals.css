@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/quantify");
+
 .gradient_button {
   background: linear-gradient(
     90deg,
@@ -21,6 +24,17 @@
 
 .no_scroll::-webkit-scrollbar {
   display: none;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.quantify-display-regular {
+  font-family: "Quantify", sans-serif;
+  font-weight: 700;
 }
 
 @keyframes gradient_animation {

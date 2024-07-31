@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import Navbar from "./components/navbar";
 import GradientBackground from "./components/gradientBackground";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ export default function RootLayout({
             <GradientBackground />
             {children}
           </div>
-          <div className="w-full h-[250px] bg-[#0D0D0D]"></div>
+          <Footer />
         </div>
       </body>
     </html>
