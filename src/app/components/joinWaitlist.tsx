@@ -23,7 +23,7 @@ const JoinWaitlist = () => {
           Join the <span className="text-[#B3B5FD] font-serif">waitlist</span>
         </div>
         <div className="h-fit w-full md:w-1/2 flex flex-col md:flex-row items-center gap-4">
-          <div className="bg-[#0F0F0F] h-[44px] w-full flex justify-start items-center pl-4 border-[1px] border-[#474747] mb-4 md:mb-0 md:flex-1 rounded-lg">
+          <div className="bg-[#0F0F0F] h-[54px] w-full flex justify-start items-center pl-4 border-[1px] border-[#474747] mb-4 md:mb-0 md:flex-1 rounded-lg">
             <input
               type="email"
               className="bg-transparent outline-none text-white"
