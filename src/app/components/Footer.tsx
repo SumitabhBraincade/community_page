@@ -9,7 +9,7 @@ const Footer = () => {
           "linear-gradient(180deg, rgba(20, 20, 20, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%)",
       }}
     >
-      <div className="h-full w-full flex flex-col gap-10 justify-between md:max-w-[1100px] py-[60px]">
+      <div className="h-full w-full flex flex-col gap-10 justify-between md:max-w-[1100px] px-4 py-[60px]">
         <div className="flex gap-3 items-center">
           <svg
             width="37"
@@ -43,7 +43,7 @@ const Footer = () => {
             aicade
           </p>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row gap-6 justify-between items-center">
           <div className="flex flex-col gap-2">
             <p className="text-[#fdfdfd82] text-2xl font-sans">
               Get ready to witness
@@ -122,7 +122,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col gap-2 md:flex-row justify-between md:items-center">
           <div>
             <p className="font-medium text-[#fdfdfd82] text-sm">
               Copyright © 2024 Aicade Inc. | All Rights Reserved
