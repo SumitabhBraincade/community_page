@@ -20,7 +20,11 @@ const page = () => {
             game creator.
           </div>
         </div>
-        <GradientButton name="Join Waitlist" />
+        <GradientButton
+          name="Join Waitlist"
+          mainContainerStyle="w-[175px] h-[54px]"
+          childContainerStyle="h-[50px]"
+        />
       </div>
       <div className="w-full h-fit my-[30px] md:my-[100px]">
         <GameView />

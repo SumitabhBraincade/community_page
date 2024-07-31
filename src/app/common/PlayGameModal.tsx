@@ -160,7 +160,11 @@ const PlayGameModal: React.FC<PlayGameModalProps> = ({
               <div className="text-[#FDFDFD] border-[1px] h-9 w-[150px] flex justify-center rounded items-center text-xs font-semibold border-[#FDFDFD] px-5 mr-3 cursor-pointer">
                 Share
               </div>
-              <GradientButton name="Remix" />
+              <GradientButton
+                name="Remix"
+                mainContainerStyle="w-[120px] h-[40px]"
+                childContainerStyle="h-[36px]"
+              />
             </div>
           </div>
         </div>
@@ -214,7 +218,11 @@ const PlayGameModal: React.FC<PlayGameModalProps> = ({
             <div className="text-[#FDFDFD] border-[1px] h-9 flex justify-center rounded items-center text-xs font-semibold border-[#FDFDFD] px-5 mr-3 cursor-pointer">
               Share
             </div>
-            <GradientButton name="Remix" />
+            <GradientButton
+              name="Remix"
+              mainContainerStyle="w-[120px] h-[40px]"
+              childContainerStyle="h-[36px]"
+            />
           </div>
         </div>
       </div>

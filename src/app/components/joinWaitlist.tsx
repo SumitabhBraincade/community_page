@@ -30,7 +30,11 @@ const JoinWaitlist = () => {
               placeholder="Enter your email address"
             ></input>
           </div>
-          <GradientButton name="Join Waitlist" />
+          <GradientButton
+            name="Join Waitlist"
+            mainContainerStyle="w-[175px] h-[54px]"
+            childContainerStyle="h-[50px]"
+          />
         </div>
       </div>
     </div>
