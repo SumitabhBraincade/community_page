@@ -3,17 +3,7 @@
 import React, { useState } from "react";
 import modalBackground from "../assets/modal_background.png";
 import GradientButton from "./GradientButton";
-
-interface Game {
-  id: string;
-  title: string;
-  thumbnail: string;
-  creator: string;
-  avatar: string;
-  gameLink: string;
-  views: number;
-  likes: number;
-}
+import { Game } from "../types/Game";
 
 interface PlayGameModalProps {
   setSelectedGame: (game: Game | null) => void;

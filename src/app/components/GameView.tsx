@@ -3,17 +3,7 @@
 import React, { useState } from "react";
 import GameCard from "../common/GameCard";
 import PlayGameModal from "../common/PlayGameModal";
-
-interface Game {
-  id: string;
-  title: string;
-  thumbnail: string;
-  creator: string;
-  avatar: string;
-  gameLink: string;
-  views: number;
-  likes: number;
-}
+import { Game } from "../types/Game";
 
 const games: Game[] = [
   {
